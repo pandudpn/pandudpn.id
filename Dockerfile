@@ -1,22 +1,10 @@
-# Stage 1: Install ALL dependencies (for build)
-FROM oven/bun:1 AS deps
+# Stage 1: Build SvelteKit app
+FROM oven/bun:1-slim AS builder
 WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
-
-# Stage 1b: Production dependencies only
-FROM oven/bun:1 AS prod-deps
-WORKDIR /app
-COPY package.json bun.lock ./
-RUN bun install --frozen-lockfile --production
-
-# Stage 2: Build the application
-FROM oven/bun:1 AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Build args for env vars needed at build time
 ARG PUBLIC_SUPABASE_URL
 ARG PUBLIC_SUPABASE_ANON_KEY
 ARG PUBLIC_SITE_URL
@@ -29,27 +17,37 @@ ENV SUPABASE_SERVICE_KEY=$SUPABASE_SERVICE_KEY
 
 RUN bun run build
 
-# Stage 3: Distroless production runtime
-FROM gcr.io/distroless/cc-debian12 AS production
+# Stage 2: Compile to single executable
+FROM oven/bun:1-slim AS compiler
 WORKDIR /app
 
-# Copy bun binary from official image
-COPY --from=oven/bun:1-slim /usr/local/bin/bun /usr/local/bin/bun
+# Install production deps
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile --production \
+    && rm -rf /root/.bun/install/cache
 
-# Copy built output + production deps
+# Copy build output
 COPY --from=builder /app/build ./build
-COPY --from=builder /app/package.json ./
-COPY --from=prod-deps /app/node_modules ./node_modules
 
-# Distroless runs as nonroot (uid 65534) by default
+# Compile to single executable
+RUN bun build ./build/index.js \
+    --compile \
+    --outfile server \
+    --minify \
+    --target=bun-linux-x64
+
+# Stage 3: Minimal production image
+FROM gcr.io/distroless/static-debian12:latest AS production
+WORKDIR /app
+
+COPY --from=compiler /app/server /app/server
+COPY --from=builder /app/build /app/build
+
 USER nonroot
-
-# Runtime env vars
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=3000
 ENV ORIGIN=https://pandudpn.id
 
 EXPOSE 3000
-
-CMD ["/usr/local/bin/bun", "./build/index.js"]
+CMD ["/app/server"]
