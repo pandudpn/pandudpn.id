@@ -1,8 +1,8 @@
 # Stage 1: Install dependencies
 FROM oven/bun:1 AS deps
 WORKDIR /app
-COPY package.json bun.lock* package-lock.json* ./
-RUN bun install --frozen-lockfile 2>/dev/null || bun install
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 
 # Stage 2: Build the application
 FROM oven/bun:1 AS builder

@@ -7,3 +7,4 @@ build
 .vercel
 dist
 .DS_Store
+package-lock.json

@@ -155,13 +155,13 @@ src/
 ## Commands
 
 ```bash
-npm run dev          # Start dev server
-npm run build        # Production build
-npm run preview      # Preview production build
-npm run check        # TypeScript check
-npm run lint         # ESLint + Prettier check
-npm run format       # Format code
-npx playwright test  # Run E2E tests
+bun run dev          # Start dev server
+bun run build        # Production build
+bun run preview      # Preview production build
+bun run check        # TypeScript check
+bun run lint         # ESLint + Prettier check
+bun run format       # Format code
+bun x playwright test  # Run E2E tests
 
 docker compose up -d    # Start production container
 docker compose down     # Stop container
