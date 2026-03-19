@@ -29,17 +29,20 @@ ENV SUPABASE_SERVICE_KEY=$SUPABASE_SERVICE_KEY
 
 RUN bun run build
 
-# Stage 3: Production runtime (minimal)
-FROM oven/bun:1-slim AS production
+# Stage 3: Distroless production runtime
+FROM gcr.io/distroless/cc-debian12 AS production
 WORKDIR /app
 
-# Copy built output + production deps only (use --chown to avoid extra layer)
-COPY --from=builder --chown=1001:1001 /app/build ./build
-COPY --from=builder --chown=1001:1001 /app/package.json ./
-COPY --from=prod-deps --chown=1001:1001 /app/node_modules ./node_modules
+# Copy bun binary from official image
+COPY --from=oven/bun:1-slim /usr/local/bin/bun /usr/local/bin/bun
 
-# Use built-in bun user (uid 1000) instead of creating new user
-USER bun
+# Copy built output + production deps
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/package.json ./
+COPY --from=prod-deps /app/node_modules ./node_modules
+
+# Distroless runs as nonroot (uid 65534) by default
+USER nonroot
 
 # Runtime env vars
 ENV NODE_ENV=production
@@ -49,7 +52,4 @@ ENV ORIGIN=https://pandudpn.id
 
 EXPOSE 3000
 
-HEALTHCHECK --interval=30s --timeout=10s --retries=3 --start-period=10s \
-  CMD bun -e "fetch('http://localhost:3000').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"
-
-CMD ["bun", "./build/index.js"]
+CMD ["/usr/local/bin/bun", "./build/index.js"]
