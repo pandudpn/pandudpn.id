@@ -1,0 +1,742 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+    - link "Skip to content" [ref=e3] [cursor=pointer]:
+        - /url: '#main-content'
+    - generic:
+        - img
+    - navigation "Main navigation" [ref=e4]:
+        - generic [ref=e6]:
+            - button "Scroll to top" [ref=e7] [cursor=pointer]:
+                - generic [ref=e8]: pandudpn
+            - generic [ref=e10]:
+                - button "Navigate to About" [ref=e11] [cursor=pointer]:
+                    - generic [ref=e12]: '01'
+                    - generic [ref=e13]: About
+                - button "Navigate to Skills" [ref=e14] [cursor=pointer]:
+                    - generic [ref=e15]: '02'
+                    - generic [ref=e16]: Skills
+                - button "Navigate to Experience" [ref=e17] [cursor=pointer]:
+                    - generic [ref=e18]: '03'
+                    - generic [ref=e19]: Experience
+                - button "Navigate to Projects" [ref=e20] [cursor=pointer]:
+                    - generic [ref=e21]: '04'
+                    - generic [ref=e22]: Projects
+                - button "Navigate to Contact" [ref=e23] [cursor=pointer]:
+                    - generic [ref=e24]: '05'
+                    - generic [ref=e25]: Contact
+            - generic [ref=e26]:
+                - generic [ref=e27]:
+                    - link "GitHub profile" [ref=e28] [cursor=pointer]:
+                        - /url: https://github.com/pandudpn
+                        - img [ref=e29]
+                    - link "LinkedIn profile" [ref=e32] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/pandudpn
+                        - img [ref=e33]
+                    - link "Send email" [ref=e37] [cursor=pointer]:
+                        - /url: mailto:pandu@pandudpn.id
+                        - img [ref=e38]
+                - generic [ref=e42]:
+                    - button "Light theme" [ref=e43]:
+                        - img [ref=e44]
+                    - button "Dark theme" [ref=e50]:
+                        - img [ref=e51]
+                    - button "System theme" [ref=e53]:
+                        - img [ref=e54]
+                - button "Hire Me" [ref=e56] [cursor=pointer]
+    - main [ref=e57]:
+        - region "Introduction" [ref=e58]:
+            - generic [ref=e60]: 'func main() { server.Start() }'
+            - generic [ref=e62]: 'type Service struct { db *sql.DB cache *redis.Client }'
+            - generic [ref=e64]: '// 300+ TPS deploy: production status: healthy'
+            - generic [ref=e65]:
+                - 'img "Terminal: whoami → Senior Backend Engineer" [ref=e67]':
+                    - generic [ref=e68]:
+                        - generic [ref=e69]: $
+                        - generic [ref=e70]: whoami
+                - heading "Hi, I'm Pandu Dwi Putra" [level=1] [ref=e72]:
+                    - generic [ref=e73]: Hi, I'm
+                    - generic "Pandu Dwi Putra"
+                - paragraph [ref=e75]: Building scalable systems with Go, Microservices, and Cloud Architecture
+                - generic [ref=e76]:
+                    - button "View Portfolio" [ref=e77] [cursor=pointer]:
+                        - button "View Portfolio" [ref=e78]:
+                            - text: View Portfolio
+                            - img [ref=e79]
+                    - link "Download Resume" [ref=e80] [cursor=pointer]:
+                        - /url: /cv/pandu-dwi-putra-resume.pdf
+                        - text: Download Resume
+                        - img [ref=e81]
+                - generic [ref=e83]:
+                    - generic [ref=e84]:
+                        - generic [ref=e85]: 76+
+                        - generic [ref=e86]: Microservices
+                    - generic [ref=e88]:
+                        - generic [ref=e89]: 4+
+                        - generic [ref=e90]: Years Experience
+                    - generic [ref=e92]:
+                        - generic [ref=e93]: 10+
+                        - generic [ref=e94]: Major Projects
+                    - generic [ref=e96]:
+                        - generic [ref=e97]: 3M+
+                        - generic [ref=e98]: Monthly Users
+            - generic [ref=e99]:
+                - generic [ref=e100]: scroll
+                - img [ref=e101]
+        - region "About me" [ref=e102]:
+            - generic [ref=e103]:
+                - generic [ref=e106]:
+                    - generic [ref=e107]: '01.'
+                    - heading "About Me" [level=2] [ref=e108]
+                - generic [ref=e110]:
+                    - generic [ref=e111]:
+                        - generic [ref=e113]:
+                            - generic [ref=e115]: PDP
+                            - generic [ref=e116]:
+                                - heading "Pandu Dwi Putra" [level=3] [ref=e117]
+                                - generic [ref=e118]: Senior Backend Engineer
+                                - generic [ref=e119]:
+                                    - img [ref=e120]
+                                    - generic [ref=e123]: Jakarta, Indonesia
+                        - generic [ref=e125]:
+                            - generic [ref=e126]:
+                                - generic [ref=e127]:
+                                    - img [ref=e128]
+                                    - generic [ref=e131]: Experience
+                                - paragraph [ref=e132]: 6+ Years
+                            - generic [ref=e133]:
+                                - generic [ref=e134]:
+                                    - img [ref=e135]
+                                    - generic [ref=e138]: Location
+                                - paragraph [ref=e139]: Jakarta, Indonesia
+                            - generic [ref=e140]:
+                                - generic [ref=e141]:
+                                    - img [ref=e142]
+                                    - generic [ref=e145]: Role
+                                - paragraph [ref=e146]: Technical Lead
+                            - generic [ref=e147]:
+                                - generic [ref=e148]:
+                                    - img [ref=e149]
+                                    - generic [ref=e153]: Focus
+                                - paragraph [ref=e154]: Backend Engineering
+                    - generic [ref=e155]:
+                        - generic [ref=e157]:
+                            - heading "Hello! I'm Pandu Dwi Putra Nugroho" [level=3] [ref=e158]
+                            - paragraph [ref=e159]: As a Senior Backend Engineer with 6+ years of experience, I have led the development of large-scale systems serving millions of users. I'm passionate about designing clean, scalable, and secure architectures using Clean Architecture and SOLID principles.
+                            - paragraph [ref=e160]: My expertise includes microservices development with Go, Event-Driven Architecture implementation, and high-traffic system optimization. I'm also active as a mentor and instructor, sharing knowledge with future developers.
+                        - separator [ref=e161]
+                        - generic [ref=e163]:
+                            - generic [ref=e164]:
+                                - img [ref=e165]
+                                - generic [ref=e170]: 0+
+                                - paragraph [ref=e171]: microservices
+                                - paragraph [ref=e172]: Architected and maintained
+                            - generic [ref=e173]:
+                                - img [ref=e174]
+                                - generic [ref=e177]: 0M+
+                                - paragraph [ref=e178]: monthly users
+                                - paragraph [ref=e179]: Systems serving
+                            - generic [ref=e180]:
+                                - img [ref=e181]
+                                - generic [ref=e183]: 0-60%
+                                - paragraph [ref=e184]: improvement
+                                - paragraph [ref=e185]: System optimization
+                        - generic [ref=e187]:
+                            - heading "Key Highlights" [level=4] [ref=e188]
+                            - list [ref=e189]:
+                                - listitem [ref=e190]:
+                                    - img [ref=e192]
+                                    - generic [ref=e194]: Successfully refactored 45+ microservices improving system performance
+                                - listitem [ref=e195]:
+                                    - img [ref=e197]
+                                    - generic [ref=e199]: Led cross-functional teams with 5M+ monthly active users
+                                - listitem [ref=e200]:
+                                    - img [ref=e202]
+                                    - generic [ref=e204]: Expert in Clean Architecture and SOLID principles
+                                - listitem [ref=e205]:
+                                    - img [ref=e207]
+                                    - generic [ref=e209]: Specialized in high-traffic systems (300+ TPS)
+                                - listitem [ref=e210]:
+                                    - img [ref=e212]
+                                    - generic [ref=e214]: Passionate mentor and technical instructor at Hacktiv8
+                        - figure "Personal quote" [ref=e216]:
+                            - paragraph [ref=e217]: '"I am passionate about mentoring and fostering a culture of continuous learning and improvement, encouraging teams to reach their full potential."'
+                            - generic [ref=e218]: — Pandu Dwi Putra
+        - region "Skills and technologies" [ref=e219]:
+            - generic [ref=e220]:
+                - generic [ref=e222]:
+                    - generic [ref=e223]:
+                        - generic [ref=e224]: '02.'
+                        - heading "Skills & Technologies" [level=2] [ref=e225]
+                    - paragraph [ref=e227]: Building production-grade distributed systems with a focus on performance, reliability, and developer experience.
+                - generic [ref=e229]:
+                    - button "Orbit" [pressed] [ref=e230]:
+                        - img [ref=e231]
+                        - text: Orbit
+                    - button "Grid" [ref=e237]:
+                        - img [ref=e238]
+                        - text: Grid
+                - img "Interactive tech stack visualization showing skills organized in orbital rings" [ref=e246]:
+                    - generic [ref=e248]: Backend
+                    - generic [ref=e249]: Engineer
+                    - group "inner orbit ring" [ref=e250]:
+                        - generic [ref=e252]:
+                            - 'button "Go: 95% proficiency, 6 years experience" [ref=e253] [cursor=pointer]':
+                                - generic: Go
+                            - 'button "TypeScript: 80% proficiency, 4 years experience" [ref=e256] [cursor=pointer]':
+                                - generic: TypeScr..
+                            - 'button "PHP: 75% proficiency, 3 years experience" [ref=e259] [cursor=pointer]':
+                                - generic: PHP
+                            - 'button "Kotlin: 60% proficiency, 2 years experience" [ref=e262] [cursor=pointer]':
+                                - generic: Kotlin
+                            - 'button "Dart: 55% proficiency, 1 years experience" [ref=e265] [cursor=pointer]':
+                                - generic: Dart
+                    - group "middle orbit ring" [ref=e268]:
+                        - generic [ref=e270]:
+                            - 'button "Microservices: 95% proficiency, 5 years experience" [ref=e271] [cursor=pointer]':
+                                - generic: Microse..
+                            - 'button "REST API: 95% proficiency, 6 years experience" [ref=e274] [cursor=pointer]':
+                                - generic: REST API
+                            - 'button "GraphQL: 75% proficiency, 3 years experience" [ref=e277] [cursor=pointer]':
+                                - generic: GraphQL
+                            - 'button "Event-Driven Architecture: 90% proficiency, 4 years experience" [ref=e280] [cursor=pointer]':
+                                - generic: Event-D..
+                            - 'button "PostgreSQL: 92% proficiency, 6 years experience" [ref=e283] [cursor=pointer]':
+                                - generic: Postgre..
+                            - 'button "MongoDB: 80% proficiency, 4 years experience" [ref=e286] [cursor=pointer]':
+                                - generic: MongoDB
+                            - 'button "Redis: 88% proficiency, 5 years experience" [ref=e289] [cursor=pointer]':
+                                - generic: Redis
+                    - group "outer orbit ring" [ref=e292]:
+                        - generic [ref=e294]:
+                            - 'button "AWS: 85% proficiency, 4 years experience" [ref=e295] [cursor=pointer]':
+                                - generic: AWS
+                            - 'button "GCP: 75% proficiency, 3 years experience" [ref=e298] [cursor=pointer]':
+                                - generic: GCP
+                            - 'button "Azure: 60% proficiency, 1 years experience" [ref=e301] [cursor=pointer]':
+                                - generic: Azure
+                            - 'button "Kubernetes: 80% proficiency, 3 years experience" [ref=e304] [cursor=pointer]':
+                                - generic: Kuberne..
+                            - 'button "Docker: 92% proficiency, 5 years experience" [ref=e307] [cursor=pointer]':
+                                - generic: Docker
+                            - 'button "Terraform: 70% proficiency, 2 years experience" [ref=e310] [cursor=pointer]':
+                                - generic: Terrafo..
+                            - 'button "CI/CD: 88% proficiency, 4 years experience" [ref=e313] [cursor=pointer]':
+                                - generic: CI/CD
+                            - 'button "GitHub Actions: 85% proficiency, 3 years experience" [ref=e316] [cursor=pointer]':
+                                - generic: GitHub ..
+                            - 'button "Apache Kafka: 82% proficiency, 3 years experience" [ref=e319] [cursor=pointer]':
+                                - generic: Apache ..
+                            - 'button "NATS: 78% proficiency, 2 years experience" [ref=e322] [cursor=pointer]':
+                                - generic: NATS
+                            - 'button "Solace: 75% proficiency, 2 years experience" [ref=e325] [cursor=pointer]':
+                                - generic: Solace
+                            - 'button "MQTT: 65% proficiency, 1 years experience" [ref=e328] [cursor=pointer]':
+                                - generic: MQTT
+                - generic [ref=e332]:
+                    - generic [ref=e333]:
+                        - img [ref=e334]
+                        - generic [ref=e337]: 0+
+                        - paragraph [ref=e338]: Microservices
+                    - generic [ref=e339]:
+                        - img [ref=e340]
+                        - generic [ref=e343]: 0+
+                        - paragraph [ref=e344]: TPS Throughput
+                    - generic [ref=e345]:
+                        - img [ref=e346]
+                        - generic [ref=e349]: 0%
+                        - paragraph [ref=e350]: Perf. Improvement
+                    - generic [ref=e351]:
+                        - img [ref=e352]
+                        - generic [ref=e357]: 0M+
+                        - paragraph [ref=e358]: Users Served
+        - region "Work experience" [ref=e359]:
+            - generic [ref=e360]:
+                - generic [ref=e362]:
+                    - generic [ref=e363]:
+                        - generic [ref=e364]: '03.'
+                        - heading "Experience" [level=2] [ref=e365]
+                    - paragraph [ref=e367]: A journey through building scalable backend systems and leading engineering teams.
+                - generic [ref=e368]:
+                    - generic [ref=e371]:
+                        - generic [ref=e372]: Sep 2023 — Present
+                        - article "Senior Backend Engineer / Technical Lead at Pintar Ventura Group (Klikoo)" [ref=e375]:
+                            - generic [ref=e376]:
+                                - heading "Senior Backend Engineer / Technical Lead" [level=3] [ref=e377]
+                                - paragraph [ref=e378]: Pintar Ventura Group (Klikoo)
+                                - paragraph [ref=e379]: Jakarta, Indonesia
+                            - paragraph [ref=e380]: Leading backend architecture and development for Klikoo, a fintech platform. Responsible for designing and implementing scalable microservices architecture, mentoring engineering teams, and driving technical decisions across the platform.
+                            - generic [ref=e381]:
+                                - generic [ref=e382]:
+                                    - generic [ref=e383]: 45+
+                                    - generic [ref=e384]: Microservices
+                                - generic [ref=e385]:
+                                    - generic [ref=e386]: 300+
+                                    - generic [ref=e387]: TPS
+                                - generic [ref=e388]:
+                                    - generic [ref=e389]: <100ms
+                                    - generic [ref=e390]: Response Time
+                                - generic [ref=e391]:
+                                    - generic [ref=e392]: 5+
+                                    - generic [ref=e393]: Team Size
+                            - generic [ref=e394]:
+                                - generic [ref=e395]: Go
+                                - generic [ref=e396]: PostgreSQL
+                                - generic [ref=e397]: Redis
+                                - generic [ref=e398]: Docker
+                                - generic [ref=e399]: Kubernetes
+                                - generic [ref=e400]: Solace
+                                - generic [ref=e401]: NATS
+                                - generic [ref=e402]: GitHub Actions
+                                - generic [ref=e403]: AWS
+                                - generic [ref=e404]: Clean Architecture
+                    - generic [ref=e406]:
+                        - generic [ref=e407]: Jan 2020 — Aug 2023
+                        - article "Lead Backend Engineer at GawaiGuru Indonesia (AXISnet)" [ref=e410]:
+                            - generic [ref=e411]:
+                                - heading "Lead Backend Engineer" [level=3] [ref=e412]
+                                - paragraph [ref=e413]: GawaiGuru Indonesia (AXISnet)
+                                - paragraph [ref=e414]: Jakarta, Indonesia
+                            - paragraph [ref=e415]: Led backend development for AXISnet, a major telecom application with 5M+ monthly active users. Managed backend infrastructure, API design, and team coordination to deliver reliable, high-availability services.
+                            - generic [ref=e416]:
+                                - generic [ref=e417]:
+                                    - generic [ref=e418]: 5M+
+                                    - generic [ref=e419]: Monthly Users
+                                - generic [ref=e420]:
+                                    - generic [ref=e421]: '-40%'
+                                    - generic [ref=e422]: API Latency
+                                - generic [ref=e423]:
+                                    - generic [ref=e424]: 99.9%
+                                    - generic [ref=e425]: Uptime
+                                - generic [ref=e426]:
+                                    - generic [ref=e427]: 20+
+                                    - generic [ref=e428]: Microservices
+                            - generic [ref=e429]:
+                                - generic [ref=e430]: Go
+                                - generic [ref=e431]: Node.js
+                                - generic [ref=e432]: PostgreSQL
+                                - generic [ref=e433]: MongoDB
+                                - generic [ref=e434]: Redis
+                                - generic [ref=e435]: Kafka
+                                - generic [ref=e436]: Docker
+                                - generic [ref=e437]: GCP
+                                - generic [ref=e438]: GraphQL
+                                - generic [ref=e439]: REST API
+                    - generic [ref=e441]:
+                        - generic [ref=e442]: Jun 2019 — Dec 2019
+                        - article "Backend Developer at Bernofarm Pharmaceutical" [ref=e445]:
+                            - generic [ref=e446]:
+                                - heading "Backend Developer" [level=3] [ref=e447]
+                                - paragraph [ref=e448]: Bernofarm Pharmaceutical
+                                - paragraph [ref=e449]: Surabaya, Indonesia
+                            - paragraph [ref=e450]: Developed internal healthcare and pharmaceutical management systems. Built RESTful APIs for inventory management and distribution tracking.
+                            - generic [ref=e451]:
+                                - generic [ref=e452]:
+                                    - generic [ref=e453]: 30+
+                                    - generic [ref=e454]: APIs Built
+                                - generic [ref=e455]:
+                                    - generic [ref=e456]: 10K+ items/day
+                                    - generic [ref=e457]: Processing
+                            - generic [ref=e458]:
+                                - generic [ref=e459]: Go
+                                - generic [ref=e460]: PHP
+                                - generic [ref=e461]: Laravel
+                                - generic [ref=e462]: PostgreSQL
+                                - generic [ref=e463]: Redis
+                                - generic [ref=e464]: REST API
+                                - generic [ref=e465]: Docker
+                    - generic [ref=e467]:
+                        - generic [ref=e468]: Jan 2019 — May 2019
+                        - article "Fullstack Developer at Ottencoffee" [ref=e471]:
+                            - generic [ref=e472]:
+                                - heading "Fullstack Developer" [level=3] [ref=e473]
+                                - paragraph [ref=e474]: Ottencoffee
+                                - paragraph [ref=e475]: Surabaya, Indonesia
+                            - paragraph [ref=e476]: Built e-commerce platform features for specialty coffee marketplace. Developed both frontend and backend components for product catalog, ordering, and payment systems.
+                            - generic [ref=e477]:
+                                - generic [ref=e478]: PHP
+                                - generic [ref=e479]: Laravel
+                                - generic [ref=e480]: Vue.js
+                                - generic [ref=e481]: MySQL
+                                - generic [ref=e482]: Redis
+                                - generic [ref=e483]: REST API
+                    - generic [ref=e485]:
+                        - generic [ref=e486]: 2021 — 2023
+                        - article "Technical Instructor (Part-time) at Hacktiv8 Indonesia" [ref=e489]:
+                            - generic [ref=e490]:
+                                - heading "Technical Instructor (Part-time)" [level=3] [ref=e491]
+                                - paragraph [ref=e492]: Hacktiv8 Indonesia
+                                - paragraph [ref=e493]: Jakarta, Indonesia (Remote)
+                            - paragraph [ref=e494]: Served as a part-time technical instructor at Hacktiv8 coding bootcamp. Taught backend development with Go, covering topics from fundamentals to advanced microservices patterns.
+                            - generic [ref=e495]:
+                                - generic [ref=e496]:
+                                    - generic [ref=e497]: 50+
+                                    - generic [ref=e498]: Students Mentored
+                                - generic [ref=e499]:
+                                    - generic [ref=e500]: 4+
+                                    - generic [ref=e501]: Cohorts
+                            - generic [ref=e502]:
+                                - generic [ref=e503]: Go
+                                - generic [ref=e504]: PostgreSQL
+                                - generic [ref=e505]: REST API
+                                - generic [ref=e506]: Docker
+                                - generic [ref=e507]: Clean Architecture
+                - link "View Full Resume" [ref=e510] [cursor=pointer]:
+                    - /url: /resume.pdf
+                    - img [ref=e511]
+                    - text: View Full Resume
+        - region "Projects" [ref=e514]:
+            - generic [ref=e515]:
+                - generic [ref=e517]:
+                    - generic [ref=e518]:
+                        - generic [ref=e519]: '04.'
+                        - heading "Projects" [level=2] [ref=e520]
+                    - paragraph [ref=e522]: Enterprise-grade systems and applications built across diverse industries, from fintech serving millions to environmental platforms making real impact.
+                - tablist "Filter projects by category" [ref=e524]:
+                    - tab "All" [selected] [ref=e525] [cursor=pointer]
+                    - tab "Financial Technology" [ref=e526] [cursor=pointer]
+                    - tab "Telecommunications" [ref=e527] [cursor=pointer]
+                    - tab "Environmental Tech" [ref=e528] [cursor=pointer]
+                    - tab "Enterprise" [ref=e529] [cursor=pointer]
+                    - tab "E-Commerce" [ref=e530] [cursor=pointer]
+                    - tab "Banking" [ref=e531] [cursor=pointer]
+                    - tab "Healthcare" [ref=e532] [cursor=pointer]
+                    - tab "Web" [ref=e533] [cursor=pointer]
+                - generic [ref=e534]:
+                    - heading "Featured Projects" [level=3] [ref=e535]
+                    - generic [ref=e536]:
+                        - generic [ref=e539]:
+                            - generic [ref=e540]:
+                                - generic [ref=e541]:
+                                    - img [ref=e543]
+                                    - generic [ref=e545]:
+                                        - heading "Klikoo" [level=4] [ref=e546]
+                                        - paragraph [ref=e547]: Senior Backend Engineer / Technical Lead
+                                - generic [ref=e548]:
+                                    - generic [ref=e549]:
+                                        - img
+                                        - text: Enterprise
+                                    - generic [ref=e550]:
+                                        - img
+                                        - text: Confidential
+                            - generic [ref=e551]:
+                                - generic [ref=e552]: Fintech Platform
+                                - generic [ref=e553]: '|'
+                                - generic [ref=e554]: 2023 — Present
+                            - paragraph [ref=e555]: A comprehensive fintech platform providing digital payment solutions, e-wallet services, and financial management tools. Led the architecture of 45+ microservices handling high-throughput transactions with real-time event processing.
+                            - generic [ref=e556]:
+                                - generic [ref=e557]:
+                                    - generic [ref=e558]: 45+
+                                    - generic [ref=e559]: Microservices
+                                - generic [ref=e560]:
+                                    - generic [ref=e561]: 300+
+                                    - generic [ref=e562]: TPS
+                                - generic [ref=e563]:
+                                    - generic [ref=e564]: <100ms
+                                    - generic [ref=e565]: Response Time
+                            - generic [ref=e566]:
+                                - generic [ref=e567]: Go
+                                - generic [ref=e568]: PostgreSQL
+                                - generic [ref=e569]: Redis
+                                - generic [ref=e570]: Solace
+                                - generic [ref=e571]: NATS
+                                - generic [ref=e572]: Docker
+                                - generic [ref=e573]: Kubernetes
+                                - generic [ref=e574]: AWS
+                                - generic [ref=e575]: Clean Architecture
+                        - generic [ref=e578]:
+                            - generic [ref=e579]:
+                                - generic [ref=e580]:
+                                    - img [ref=e582]
+                                    - generic [ref=e584]:
+                                        - heading "AXISnet" [level=4] [ref=e585]
+                                        - paragraph [ref=e586]: Lead Backend Engineer
+                                - generic [ref=e587]:
+                                    - generic [ref=e588]:
+                                        - img
+                                        - text: Enterprise
+                                    - generic [ref=e589]:
+                                        - img
+                                        - text: Confidential
+                            - generic [ref=e590]:
+                                - generic [ref=e591]: Telecom Super App
+                                - generic [ref=e592]: '|'
+                                - generic [ref=e593]: 2020 — 2023
+                            - paragraph [ref=e594]: Major telecom application serving 5M+ monthly active users. Built and maintained backend services powering package purchases, real-time notifications, and user management for one of Indonesia's largest mobile carriers.
+                            - generic [ref=e595]:
+                                - generic [ref=e596]:
+                                    - generic [ref=e597]: 5M+
+                                    - generic [ref=e598]: Monthly Users
+                                - generic [ref=e599]:
+                                    - generic [ref=e600]: '-40%'
+                                    - generic [ref=e601]: API Latency
+                                - generic [ref=e602]:
+                                    - generic [ref=e603]: 99.9%
+                                    - generic [ref=e604]: Uptime
+                            - generic [ref=e605]:
+                                - generic [ref=e606]: Go
+                                - generic [ref=e607]: Node.js
+                                - generic [ref=e608]: PostgreSQL
+                                - generic [ref=e609]: MongoDB
+                                - generic [ref=e610]: Redis
+                                - generic [ref=e611]: Kafka
+                                - generic [ref=e612]: Docker
+                                - generic [ref=e613]: GCP
+                                - generic [ref=e614]: GraphQL
+                        - generic [ref=e617]:
+                            - generic [ref=e619]:
+                                - img [ref=e621]
+                                - generic [ref=e624]:
+                                    - heading "Duitin" [level=4] [ref=e625]
+                                    - paragraph [ref=e626]: Backend Developer
+                            - generic [ref=e627]:
+                                - generic [ref=e628]: Environmental Tech
+                                - generic [ref=e629]: '|'
+                                - generic [ref=e630]: 2022 — 2023
+                            - paragraph [ref=e631]: An innovative environmental technology platform connecting waste collectors with recycling facilities. Built backend services for waste tracking, route optimization, and reward distribution systems.
+                            - generic [ref=e632]:
+                                - generic [ref=e633]:
+                                    - generic [ref=e634]: 100K+ kg
+                                    - generic [ref=e635]: Waste Tracked
+                                - generic [ref=e636]:
+                                    - generic [ref=e637]: 500+
+                                    - generic [ref=e638]: Collectors
+                            - generic [ref=e639]:
+                                - generic [ref=e640]: Go
+                                - generic [ref=e641]: PostgreSQL
+                                - generic [ref=e642]: Redis
+                                - generic [ref=e643]: Docker
+                                - generic [ref=e644]: REST API
+                                - generic [ref=e645]: Firebase
+                - generic [ref=e646]:
+                    - heading "All Projects" [level=3] [ref=e647]
+                    - generic [ref=e648]:
+                        - generic [ref=e651]:
+                            - generic [ref=e652]:
+                                - generic [ref=e653]:
+                                    - img [ref=e655]
+                                    - heading "Gagas ERP" [level=4] [ref=e660]
+                                - img "Enterprise project" [ref=e662]
+                            - generic [ref=e664]: Backend Developer | 2021 — 2022
+                            - paragraph [ref=e665]: A comprehensive ERP system designed for SMEs in Indonesia. Developed modules for inventory management, accounting, HR, and sales pipeline with real-time reporting dashboards.
+                            - generic [ref=e666]:
+                                - generic [ref=e667]:
+                                    - img [ref=e668]
+                                    - generic [ref=e670]: 'Modules: 8+'
+                                - generic [ref=e671]:
+                                    - img [ref=e672]
+                                    - generic [ref=e674]: 'Companies: 10+'
+                            - generic [ref=e675]:
+                                - generic [ref=e676]: Go
+                                - generic [ref=e677]: PostgreSQL
+                                - generic [ref=e678]: Redis
+                                - generic [ref=e679]: REST API
+                                - generic [ref=e680]: Docker
+                                - generic [ref=e681]: '+1'
+                        - generic [ref=e684]:
+                            - generic [ref=e685]:
+                                - generic [ref=e686]:
+                                    - img [ref=e688]
+                                    - heading "Bernofarm" [level=4] [ref=e691]
+                                - generic [ref=e692]:
+                                    - img "Enterprise project" [ref=e693]
+                                    - img "Confidential project" [ref=e695]
+                            - generic [ref=e698]: Backend Developer | 2019
+                            - paragraph [ref=e699]: Internal pharmaceutical management system for one of Indonesia's major pharmaceutical companies. Built APIs for inventory tracking, distribution management, and compliance reporting.
+                            - generic [ref=e700]:
+                                - generic [ref=e701]:
+                                    - img [ref=e702]
+                                    - generic [ref=e704]: 'Products Managed: 10K+'
+                                - generic [ref=e705]:
+                                    - img [ref=e706]
+                                    - generic [ref=e708]: 'Daily Transactions: 5K+'
+                            - generic [ref=e709]:
+                                - generic [ref=e710]: Go
+                                - generic [ref=e711]: PHP
+                                - generic [ref=e712]: Laravel
+                                - generic [ref=e713]: PostgreSQL
+                                - generic [ref=e714]: Redis
+                                - generic [ref=e715]: '+1'
+                        - generic [ref=e718]:
+                            - generic [ref=e720]:
+                                - img [ref=e722]
+                                - heading "Agrinesia" [level=4] [ref=e727]
+                            - generic [ref=e728]: Backend Developer | 2020 — 2021
+                            - paragraph [ref=e729]: Digital agriculture platform connecting farmers with markets and providing crop management tools. Developed backend services for marketplace, logistics tracking, and farmer analytics.
+                            - generic [ref=e730]:
+                                - generic [ref=e731]: Go
+                                - generic [ref=e732]: PostgreSQL
+                                - generic [ref=e733]: Redis
+                                - generic [ref=e734]: REST API
+                                - generic [ref=e735]: Docker
+                        - generic [ref=e738]:
+                            - generic [ref=e739]:
+                                - generic [ref=e740]:
+                                    - img [ref=e742]
+                                    - heading "BRInvestYuk" [level=4] [ref=e745]
+                                - generic [ref=e746]:
+                                    - img "Enterprise project" [ref=e747]
+                                    - img "Confidential project" [ref=e749]
+                            - generic [ref=e752]: Backend Developer | 2020 — 2021
+                            - paragraph [ref=e753]: A digital investment platform by BRI (Bank Rakyat Indonesia) enabling retail investors to access mutual funds and other investment products. Contributed to backend API development and payment gateway integration.
+                            - generic [ref=e754]:
+                                - generic [ref=e755]:
+                                    - img [ref=e756]
+                                    - generic [ref=e758]: 'Investors: 1K+'
+                                - generic [ref=e759]:
+                                    - img [ref=e760]
+                                    - generic [ref=e762]: 'Transactions: 10K+'
+                            - generic [ref=e763]:
+                                - generic [ref=e764]: Go
+                                - generic [ref=e765]: PostgreSQL
+                                - generic [ref=e766]: Redis
+                                - generic [ref=e767]: REST API
+                                - generic [ref=e768]: Docker
+                                - generic [ref=e769]: '+1'
+                        - generic [ref=e772]:
+                            - generic [ref=e774]:
+                                - img [ref=e776]
+                                - heading "Ottencoffee" [level=4] [ref=e781]
+                            - generic [ref=e782]: Fullstack Developer | 2019
+                            - paragraph [ref=e783]: Specialty coffee e-commerce platform offering a curated selection of coffee beans, equipment, and accessories. Built product catalog, ordering system, and payment integration features.
+                            - generic [ref=e784]:
+                                - generic [ref=e785]: PHP
+                                - generic [ref=e786]: Laravel
+                                - generic [ref=e787]: Vue.js
+                                - generic [ref=e788]: MySQL
+                                - generic [ref=e789]: Redis
+                                - generic [ref=e790]: '+1'
+                            - link "Visit Ottencoffee live site" [ref=e792] [cursor=pointer]:
+                                - /url: https://ottencoffee.co.id
+                                - img [ref=e793]
+                                - generic [ref=e797]: Live
+                        - generic [ref=e800]:
+                            - generic [ref=e802]:
+                                - img [ref=e804]
+                                - heading "Personal Portfolio" [level=4] [ref=e808]
+                            - generic [ref=e809]: Designer & Developer | 2024 — Present
+                            - paragraph [ref=e810]: My personal portfolio website built with SvelteKit 2, Svelte 5, and shadcn-svelte. Features a Terminal Noir design aesthetic with smooth animations, dark/light theme support, and real-time GitHub integration.
+                            - generic [ref=e811]:
+                                - generic [ref=e812]: SvelteKit
+                                - generic [ref=e813]: Svelte 5
+                                - generic [ref=e814]: TypeScript
+                                - generic [ref=e815]: Tailwind CSS
+                                - generic [ref=e816]: shadcn-svelte
+                                - generic [ref=e817]: '+1'
+                            - generic [ref=e818]:
+                                - link "View Personal Portfolio on GitHub" [ref=e819] [cursor=pointer]:
+                                    - /url: https://github.com/pandudpn/pandudpn.id
+                                    - img [ref=e820]
+                                    - generic [ref=e824]: Source
+                                - link "Visit Personal Portfolio live site" [ref=e826] [cursor=pointer]:
+                                    - /url: https://pandudpn.id
+                                    - img [ref=e827]
+                                    - generic [ref=e831]: Live
+        - region "Contact" [ref=e832]:
+            - generic [ref=e833]:
+                - generic [ref=e835]:
+                    - generic [ref=e836]:
+                        - generic [ref=e837]: '05.'
+                        - heading "Contact" [level=2] [ref=e838]
+                    - paragraph [ref=e840]: Have a project in mind or want to discuss potential collaboration? Let's connect.
+                - generic [ref=e841]:
+                    - generic [ref=e843]:
+                        - status [ref=e844]: Available for Projects
+                        - paragraph [ref=e848]: I'm currently available for enterprise projects and technical consulting. Whether you need a senior backend engineer or a technical consultant, I'd love to hear about your project.
+                        - generic [ref=e849]:
+                            - 'link "Contact via Email: pandu@pandudpn.id" [ref=e850] [cursor=pointer]':
+                                - /url: mailto:pandu@pandudpn.id
+                                - generic [ref=e851]:
+                                    - img [ref=e853]
+                                    - generic [ref=e856]:
+                                        - paragraph [ref=e857]: Email
+                                        - paragraph [ref=e858]: pandu@pandudpn.id
+                            - 'link "Contact via WhatsApp: +62 821-2227-4139" [ref=e859] [cursor=pointer]':
+                                - /url: https://wa.me/6282122274139
+                                - generic [ref=e860]:
+                                    - img [ref=e862]
+                                    - generic [ref=e864]:
+                                        - paragraph [ref=e865]: WhatsApp
+                                        - paragraph [ref=e866]: +62 821-2227-4139
+                            - 'link "Contact via Location: Jakarta, Indonesia" [ref=e867] [cursor=pointer]':
+                                - /url: https://maps.google.com/?q=Jakarta,Indonesia
+                                - generic [ref=e868]:
+                                    - img [ref=e870]
+                                    - generic [ref=e873]:
+                                        - paragraph [ref=e874]: Location
+                                        - paragraph [ref=e875]: Jakarta, Indonesia
+                            - 'link "Contact via LinkedIn: linkedin.com/in/pandudpn" [ref=e876] [cursor=pointer]':
+                                - /url: https://www.linkedin.com/in/pandudpn
+                                - generic [ref=e877]:
+                                    - img [ref=e879]
+                                    - generic [ref=e883]:
+                                        - paragraph [ref=e884]: LinkedIn
+                                        - paragraph [ref=e885]: linkedin.com/in/pandudpn
+                    - generic [ref=e888]:
+                        - generic [ref=e889]:
+                            - generic [ref=e890]:
+                                - text: Name
+                                - generic [ref=e891]: '*'
+                            - textbox "Name" [ref=e892]:
+                                - /placeholder: Your name
+                        - generic [ref=e893]:
+                            - generic [ref=e894]:
+                                - text: Email
+                                - generic [ref=e895]: '*'
+                            - textbox "Email" [ref=e896]:
+                                - /placeholder: your@email.com
+                        - generic [ref=e897]:
+                            - generic [ref=e898]:
+                                - text: Company
+                                - generic [ref=e899]: (optional)
+                            - textbox "Company (optional)" [ref=e900]:
+                                - /placeholder: Your company
+                        - generic [ref=e901]:
+                            - generic [ref=e902]:
+                                - generic [ref=e903]:
+                                    - text: Message
+                                    - generic [ref=e904]: '*'
+                                - generic [ref=e905]: 0/1000
+                            - textbox "Message" [ref=e906]:
+                                - /placeholder: Tell me about your project...
+                        - button "Send Message" [ref=e907] [cursor=pointer]:
+                            - img [ref=e908]
+                            - text: Send Message
+                - generic [ref=e912]:
+                    - heading "Ready to Build Something Amazing?" [level=3] [ref=e913]
+                    - paragraph [ref=e914]: Let's discuss how I can help architect and build your next high-performance system.
+                    - generic [ref=e915]:
+                        - link "Chat via WhatsApp" [ref=e916] [cursor=pointer]:
+                            - /url: https://wa.me/6282122274139
+                            - img [ref=e917]
+                            - text: Chat via WhatsApp
+                        - link "Send Email" [ref=e919] [cursor=pointer]:
+                            - /url: mailto:pandu@pandudpn.id
+                            - img [ref=e920]
+                            - text: Send Email
+    - contentinfo "Site footer" [ref=e923]:
+        - separator [ref=e924]
+        - generic [ref=e925]:
+            - generic [ref=e926]:
+                - navigation "Social links" [ref=e927]:
+                    - link "GitHub" [ref=e928] [cursor=pointer]:
+                        - /url: https://github.com/pandudpn
+                        - img [ref=e929]
+                    - link "LinkedIn" [ref=e932] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/pandudpn
+                        - img [ref=e933]
+                    - link "Email" [ref=e937] [cursor=pointer]:
+                        - /url: mailto:pandu@pandudpn.id
+                        - img [ref=e938]
+                - paragraph [ref=e941]:
+                    - text: Made with
+                    - img "love" [ref=e942]
+                    - text: using SvelteKit & Tailwind CSS
+                - generic [ref=e944]:
+                    - img [ref=e945]
+                    - generic [ref=e948]: 'Visitors:'
+                - paragraph [ref=e950]: © 2026 pandudpn. All rights reserved.
+            - button "Back to top" [ref=e951] [cursor=pointer]:
+                - img [ref=e952]
+```
