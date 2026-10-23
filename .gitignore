@@ -1,10 +1,24 @@
-node_modules
-.svelte-kit
-build
-.env
-.env.local
-.env.production
-.vercel
-dist
+# dependencies
+/node_modules
+
+# SvelteKit output
+/.svelte-kit
+/build
+
+# on the VM: the uploaded builds (npm run deploy) and .env with the tunnel token
+/site
+.env*
+
+# the project uses npm; keep a stray bun.lock from tooling out
+bun.lock
+
+# design notes stay; the inspector's screenshot folders don't
+/.taste-skill/*/
+
+# personal working files
+/docs/
+
+# misc
 .DS_Store
-package-lock.json
+*.pem
+npm-debug.log*

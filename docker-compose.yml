@@ -1,28 +1,40 @@
+# Production on the VM `pandu`, run from a checkout of this repo (see Deploy in README.md).
+# `npm run deploy` uploads the build into ./site; the tunnel token comes from .env, kept out of git.
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        PUBLIC_SUPABASE_URL: ${PUBLIC_SUPABASE_URL}
-        PUBLIC_SUPABASE_ANON_KEY: ${PUBLIC_SUPABASE_ANON_KEY}
-        PUBLIC_SITE_URL: ${PUBLIC_SITE_URL}
-        SUPABASE_SERVICE_KEY: ${SUPABASE_SERVICE_KEY}
-    ports:
-      - '3000:3000'
+    image: node:24-alpine
+    container_name: pandudpn-id
+    restart: unless-stopped
+    user: node
+    working_dir: /app
+    command: ['node', 'build']
+    volumes:
+      - ./site:/app:ro
     environment:
       - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=3000
-      - ORIGIN=${PUBLIC_SITE_URL:-https://pandudpn.id}
-      - PUBLIC_SUPABASE_URL=${PUBLIC_SUPABASE_URL}
-      - PUBLIC_SUPABASE_ANON_KEY=${PUBLIC_SUPABASE_ANON_KEY}
-      - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
-      - PUBLIC_SITE_URL=${PUBLIC_SITE_URL:-https://pandudpn.id}
-    restart: unless-stopped
     healthcheck:
-      test: ['CMD', 'curl', '-f', 'http://localhost:3000']
+      test: ['CMD', 'wget', '-q', '-O', '/dev/null', 'http://127.0.0.1:3000/']
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 10s
+      start_period: 15s
+    networks:
+      - tools-net
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-pandudpn-id
+    restart: always
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${TUNNEL_TOKEN:?set TUNNEL_TOKEN in .env next to docker-compose.yml}
+    networks:
+      - tools-net
+    depends_on:
+      - web
+
+networks:
+  tools-net:
+    external: true
